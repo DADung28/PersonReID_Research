@@ -1,0 +1,21 @@
+#!/bin/bash 
+
+#python3 train.py --piresnet_3loss --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 256 --w 256 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PIResNet_3loss_256*256 --gpu_ids $1
+#python3 cross_test.py --name PIResNet_3loss_256*256 --test duke --gpu_ids $1
+#python3 cross_test.py --name PIResNet_3loss_256*256 --test market --gpu_ids $1
+#python3 cross_test.py --name PIResNet_3loss_256*256 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --sphrnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 2 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name SPHRNet384*384 --gpu_ids $1
+#python3 cross_test.py --name SPHRNet384*384 --test duke --gpu_ids $1
+#python3 cross_test.py --name SPHRNet384*384 --test market --gpu_ids $1
+#python3 cross_test.py --name SPHRNet384*384 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --pihrnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PIHRNet384*384 --gpu_ids $1
+#python3 cross_test.py --name PIHRNet384*384 --test duke --gpu_ids $1
+#python3 cross_test.py --name PIHRNet384*384 --test market --gpu_ids $1
+#python3 cross_test.py --name PIHRNet384*384 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --hrnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name HRNet384*384 --gpu_ids $1
+python3 cross_test.py --name HRNet384*384 --test duke --gpu_ids $1
+python3 cross_test.py --name HRNet384*384 --test market --gpu_ids $1
+python3 cross_test.py --name HRNet384*384 --test cuhk03 --gpu_ids $1

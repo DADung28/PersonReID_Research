@@ -1,0 +1,6 @@
+#!/bin/bash 
+
+python3 train.py --use_laswin --triplet --data_dir /home/jun/ReID_Dataset/market/dataloader/ --lr 0.01 --batch 64 --erasing_p 0.5  --warm_epoch 5 --name LASwin_all_trick_market --gpu_ids $1
+python3 cross_test.py --name LASwin_all_trick_market --test duke --gpu_ids $1
+python3 cross_test.py --name LASwin_all_trick_market --test market --gpu_ids $1
+python3 cross_test.py --name LASwin_all_trick_market --test cuhk03 --gpu_ids $1

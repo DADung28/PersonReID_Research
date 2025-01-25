@@ -1,0 +1,10 @@
+#!/bin/bash
+
+### Train for swin
+## Market1501
+python3 train.py --gpu_ids $1 --use_swin --data_dir /home/jun/ReID_Dataset/market1501/dataloader --lr 0.01 --batch 32 --circle --erasing_p 0.5  --warm_epoch 5 --name swin_all_trick_market --gpu_ids $1
+python3 cross_test.py --name swin_all_trick_market --gpu_ids $1 --test market
+## DukeMTMC
+python3 train.py --gpu_ids $1 --use_swin --data_dir /home/jun/ReID_Dataset/dukemtmcreid/dataloader --lr 0.01 --batch 32 --circle --erasing_p 0.5  --warm_epoch 5 --name swin_all_trick_duke
+## Cuhk03
+python3 train.py --gpu_ids $1 --use_swin --data_dir /home/jun/ReID_Dataset/cuhk03/dataloader_new_detected --lr 0.01 --batch 32 --circle --erasing_p 0.5  --warm_epoch 5 --name swin_all_trick_cuhk03

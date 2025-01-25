@@ -1,0 +1,28 @@
+#!/bin/bash
+
+### cross_test for LAViTNet
+## DukeMTMC
+
+# market-market
+python3 train.py --use_latrans --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --batch 32 --erasing_p 0.5  --warm_epoch 5 --name LAViT_all_trick_duke --gpu_ids $1
+python3 cross_test.py --name LAViT_all_trick_duke --gpu_ids $1 --test market
+# market-cuhk03
+python3 cross_test.py --name LAViT_all_trick_duke --gpu_ids $1 --test cuhk03
+# market-duke
+python3 cross_test.py --name LAViT_all_trick_duke --gpu_ids $1 --test duke
+## cuhk03
+# cuhk03-market
+#python3 train.py --use_latrans --data_dir /home/jun/ReID_Dataset/cuhk03/dataloader_new_detected/ --lr 0.01 --batch 64 --erasing_p 0.5  --warm_epoch 5 --name LAViT_all_trick_cuhk03 --gpu_ids $1
+#python3 cross_test.py --name LAViT_all_trick_cuhk03 --gpu_ids $1 --test market
+# cuhk03-cuhk03
+#python3 cross_test.py --name LAViT_all_trick_cuhk03 --gpu_ids $1 --test cuhk03
+# cuhk03-duke
+#python3 cross_test.py --name LAViT_all_trick_cuhk03 --gpu_ids $1 --test duke
+## Market1501
+#python3 train.py --use_latrans --data_dir /home/jun/ReID_Dataset/market/dataloader/ --lr 0.01 --batch 64 --erasing_p 0.5  --warm_epoch 5 --name LAViT_all_trick_market --gpu_ids $1
+# duke-market
+#python3 cross_test.py --name LAViT_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+#python3 cross_test.py --name LAViT_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+#python3 cross_test.py --name LAViT_all_trick_duke --gpu_ids $1 --test duke

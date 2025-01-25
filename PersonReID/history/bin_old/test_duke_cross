@@ -1,0 +1,83 @@
+#!/bin/bash
+
+
+### cross_test for ConvNext
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name convnext_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name convnext_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name convnext_all_trick_duke --gpu_ids $1 --test duke
+
+### cross_test for densenet121
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name dense_all_trick_cduke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name dense_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name dense_all_trick_duke --gpu_ids $1 --test duke
+
+### cross_test for efficientnet-b4
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name efficient_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name efficient_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name efficient_all_trick_duke --gpu_ids $1 --test duke
+
+### cross_test for hrNet
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name hr_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name hr_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name hr_all_trick_duke --gpu_ids $1 --test duke
+
+### cross_test for NAS
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name NAS_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name NAS_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name NAS_all_trick_duke3 --gpu_ids $1 --test duke
+
+### cross_test for PCB
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name PCB_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name PCB_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name PCB_all_trick_duke --gpu_ids $1 --test duke
+
+### cross_test for resnet
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name resnet_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name resnet_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name resnet_all_trick_duke --gpu_ids $1 --test duke
+
+### cross_test for swin
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name swin_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name swin_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name swin_all_trick_duke --gpu_ids $1 --test duke
+
+### cross_test for vit
+## DukeMTMC
+# duke-market
+python3 cross_test.py --name vit_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name vit_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name vit_all_trick_duke --gpu_ids $1 --test duke

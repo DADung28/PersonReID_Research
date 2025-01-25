@@ -1,0 +1,9 @@
+#!/bin/bash
+
+### Train for PCB
+## Market1501
+python3 train.py --gpu_ids $1 --PCB --data_dir /home/jun/ReID_Dataset/market1501/dataloader --lr 0.01 --batch 16 --erasing_p 0.5  --warm_epoch 5 --name PCB_all_trick_market; python3 test.py --name PCB_all_trick_market --gpu_ids $1
+## DukeMTMC
+python3 train.py --gpu_ids $1 --PCB --data_dir /home/jun/ReID_Dataset/dukemtmcreid/dataloader --lr 0.01 --batch 16 --erasing_p 0.5  --warm_epoch 5 --name PCB_all_trick_duke; python3 test.py --name PCB_all_trick_duke --gpu_ids $1
+## Cuhk03
+python3 train.py --gpu_ids $1 --PCB --data_dir /home/jun/ReID_Dataset/cuhk03/dataloader_new_detected --lr 0.01 --batch 16 --erasing_p 0.5  --warm_epoch 5 --name PCB_all_trick_cuhk03; python3 test.py --name PCB_all_trick_cuhk03 --gpu_ids $1

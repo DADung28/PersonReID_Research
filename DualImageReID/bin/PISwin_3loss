@@ -1,0 +1,6 @@
+#!/bin/bash 
+
+python3 train.py --piswin_3loss --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name PISwin_3loss_384*384 --gpu_ids $1
+python3 cross_test.py --name PISwin_3loss_384*384 --test duke --gpu_ids $1
+python3 cross_test.py --name PISwin_3loss_384*384 --test market --gpu_ids $1
+python3 cross_test.py --name PISwin_3loss_384*384 --test cuhk03 --gpu_ids $1

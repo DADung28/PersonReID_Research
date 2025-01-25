@@ -1,0 +1,56 @@
+#!/bin/bash 
+python3 train.py --resnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name ResNet384*384 --gpu_ids $1
+python3 cross_test.py --name ResNet384*384 --test duke --gpu_ids $1
+python3 cross_test.py --name ResNet384*384 --test market --gpu_ids $1
+python3 cross_test.py --name ResNet384*384 --test cuhk03 --gpu_ids $1
+
+
+python3 train.py --piresnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PIResNet384*384 --gpu_ids $1
+python3 cross_test.py --name PIResNet384*384 --test duke --gpu_ids $1
+python3 cross_test.py --name PIResNet384*384 --test market --gpu_ids $1
+python3 cross_test.py --name PIResNet384*384 --test cuhk03 --gpu_ids $1
+
+python3 train.py --spresnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name SPResNet384*384 --gpu_ids $1
+python3 cross_test.py --name SPResNet384*384 --test duke --gpu_ids $1
+python3 cross_test.py --name SPResNet384*384 --test market --gpu_ids $1
+python3 cross_test.py --name SPResNet384*384 --test cuhk03 --gpu_ids $1
+
+
+
+#python3 train.py --piresnet_3loss --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 256 --w 256 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PIResNet_3loss_256*256 --gpu_ids $1
+#python3 cross_test.py --name PIResNet_3loss_256*256 --test duke --gpu_ids $1
+#python3 cross_test.py --name PIResNet_3loss_256*256 --test market --gpu_ids $1
+#python3 cross_test.py --name PIResNet_3loss_256*256 --test cuhk03 --gpu_ids $1
+
+
+#python3 train.py --resnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 256 --w 128 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name ResNet256*128 --gpu_ids $1
+#python3 cross_test.py --name ResNet256*128 --test duke --gpu_ids $1
+#python3 cross_test.py --name ResNet256*128 --test market --gpu_ids $1
+#python3 cross_test.py --name ResNet256*128 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --resnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 256 --w 256 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name ResNet256*256 --gpu_ids $1
+#python3 cross_test.py --name ResNet256*256 --test duke --gpu_ids $1
+#python3 cross_test.py --name ResNet256*256 --test market --gpu_ids $1
+#python3 cross_test.py --name ResNet256*256 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --piresnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 256 --w 256 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PIResNet256*256 --gpu_ids $1
+#python3 cross_test.py --name PIResNet256*256 --test duke --gpu_ids $1
+#python3 cross_test.py --name PIResNet256*256 --test market --gpu_ids $1
+#python3 cross_test.py --name PIResNet256*256 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --piresnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 224 --w 224 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PIResnet224 --gpu_ids $1
+#python3 cross_test.py --name PIResnet224 --test duke --gpu_ids $1
+#python3 cross_test.py --name PIResnet224 --test market --gpu_ids $1
+#python3 cross_test.py --name PIResnet224 --test cuhk03 --gpu_ids $1
+
+
+
+#python3 train.py --resnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name ResNet384 --gpu_ids $1
+#python3 cross_test.py --name ResNet384 --test duke --gpu_ids $1
+#python3 cross_test.py --name ResNet384 --test market --gpu_ids $1
+#python3 cross_test.py --name ResNet384 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --piresnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --stride 1 --h 384 --w 384 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PIResnet384 --gpu_ids $1
+#python3 cross_test.py --name PIResnet384 --test duke --gpu_ids $1
+#python3 cross_test.py --name PIResnet384 --test market --gpu_ids $1
+#python3 cross_test.py --name PIResnet384 --test cuhk03 --gpu_ids $1'''

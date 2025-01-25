@@ -1,0 +1,16 @@
+epochs 10:
+ overall acc. : 0.886493
+ mean acc.    : 0.786481
+ mean IoU     : 0.704118
+epochs 20:
+ overall acc. : 0.894312
+ mean acc.    : 0.814158
+ mean IoU     : 0.725236
+epochs 30:
+ overall acc. : 0.894023
+ mean acc.    : 0.811798
+ mean IoU     : 0.723922
+epochs 40;
+ overall acc. : 0.893713 
+ mean acc.    : 0.812954 
+ mean IoU     : 0.723538 

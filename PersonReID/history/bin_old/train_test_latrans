@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+### Train for ConvNext
+## Market1501
+python3 train.py --gpu_ids $1 --use_latrans --data_dir /home/jun/ReID_Dataset/market/dataloader --lr 0.01 --batch 16 --erasing_p 0.5  --warm_epoch 5 --name latran_all_trick_market
+## Market1501
+# market-market
+python3 cross_test.py --name latran_all_trick_market --gpu_ids $1 --test market
+# market-cuhk03
+python3 cross_test.py --name latran_all_trick_market --gpu_ids $1 --test cuhk03
+# market-duke
+python3 cross_test.py --name latran_all_trick_market --gpu_ids $1 --test duke
+
+## DukeMTMC
+python3 train.py --gpu_ids $1 --use_latrans --data_dir /home/jun/ReID_Dataset/duke/dataloader --lr 0.01 --batch 16 --erasing_p 0.5  --warm_epoch 5 --name latran_all_trick_duke
+python3 cross_test.py --name latran_all_trick_duke --gpu_ids $1 --test market
+# duke-cuhk03
+python3 cross_test.py --name latran_all_trick_duke --gpu_ids $1 --test cuhk03
+# duke-duke
+python3 cross_test.py --name latran_all_trick_duke --gpu_ids $1 --test duke
+## Cuhk03
+python3 train.py --gpu_ids $1 --use_latrans --data_dir /home/jun/ReID_Dataset/cuhk03/dataloader_new_detected --lr 0.01 --batch 16 --erasing_p 0.5  --warm_epoch 5 --name latran_all_trick_cuhk03
+# cuhk03-market
+python3 cross_test.py --name latran_all_trick_cuhk03 --gpu_ids $1 --test market
+# cuhk03-cuhk03
+python3 cross_test.py --name latran_all_trick_cuhk03 --gpu_ids $1 --test cuhk03
+# cuhk03-duke
+python3 cross_test.py --name latran_all_trick_cuhk03 --gpu_ids $1 --test duke
+

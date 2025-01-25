@@ -1,0 +1,21 @@
+#!/bin/bash 
+python3 train.py --singleresnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --stride 1 --h 384 --w 384 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name SingleResnet50 --gpu_ids $1
+python3 cross_test.py --name SingleResnet50 --test duke --gpu_ids $1
+python3 cross_test.py --name SingleResnet50 --test market --gpu_ids $1
+python3 cross_test.py --name SingleResnet50 --test cuhk03 --gpu_ids $1
+
+python3 train.py --singlehrnet --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --stride 1 --h 384 --w 384 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name SingleHRNet --gpu_ids $1
+python3 cross_test.py --name SingleHRNet --test duke --gpu_ids $1
+python3 cross_test.py --name SingleHRNet --test market --gpu_ids $1
+python3 cross_test.py --name SingleHRNet --test cuhk03 --gpu_ids $1
+
+
+python3 train.py --singleswin --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --h 384 --w 384 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name SingleSwin --gpu_ids $1
+python3 cross_test.py --name SingleSwin --test duke --gpu_ids $1
+python3 cross_test.py --name SingleSwin --test market --gpu_ids $1
+python3 cross_test.py --name SingleSwin --test cuhk03 --gpu_ids $1
+
+python3 train.py --singlevit --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --h 384 --w 384 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name SingleViT --gpu_ids $1
+python3 cross_test.py --name SingleViT --test duke --gpu_ids $1
+python3 cross_test.py --name SingleViT --test market --gpu_ids $1
+python3 cross_test.py --name SingleViT --test cuhk03 --gpu_ids $1

@@ -1,0 +1,3 @@
+ overall acc. : 0.894623 
+ mean acc.    : 0.815121 
+ mean IoU     : 0.726167

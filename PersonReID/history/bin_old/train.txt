@@ -1,0 +1,8 @@
+###### Train all trick
+	--lr 0.01 --batch 16 --erasing_p 0.5  --warm_epoch 5
+###### Train with market1501
+	--data_dir /home/jun/ReID_Dataset/market1501/dataloader
+###### Train with dukemtmc
+	--data_dir /home/jun/ReID_Dataset/dukemtmcreid/dataloader
+###### Train with cuhk03
+	--data_dir /home/jun/ReID_Dataset/cuhk03/dataloader_new_detected --cuhk03

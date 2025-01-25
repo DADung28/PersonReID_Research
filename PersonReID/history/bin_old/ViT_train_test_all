@@ -1,0 +1,15 @@
+#!/bin/bash 
+python3 train.py --use_vit --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --batch 64 --triplet --erasing_p 0.5  --warm_epoch 5 --name ViT_all_trick_duke --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_duke --test duke --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_duke --test market --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_duke --test cuhk03 --gpu_ids $1
+
+python3 train.py --use_vit --data_dir /home/jun/ReID_Dataset/market/dataloader/ --lr 0.01 --batch 64 --triplet --erasing_p 0.5  --warm_epoch 5 --name ViT_all_trick_market --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_market --test duke --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_market --test market --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_market --test cuhk03 --gpu_ids $1
+
+python3 train.py --use_vit  --data_dir /home/jun/ReID_Dataset/cuhk03/dataloader_new_detected/ --lr 0.01 --triplet --batch 64 --erasing_p 0.5  --warm_epoch 5 --name ViT_all_trick_cuhk03 --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_cuhk03 --test duke --:gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_cuhk03 --test market --gpu_ids $1
+python3 cross_test.py --name ViT_all_trick_cuhk03 --test cuhk03 --gpu_ids $1

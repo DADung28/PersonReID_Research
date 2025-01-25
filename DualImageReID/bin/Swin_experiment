@@ -1,0 +1,22 @@
+#!/bin/bash 
+
+#python3 train.py --piswin --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --h 224 --w 224 --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name PISwin224*224 --gpu_ids $1
+#python3 cross_test.py --name PISwin224*224 --test duke --gpu_ids $1
+#python3 cross_test.py --name PISwin224*224 --test market --gpu_ids $1
+#python3 cross_test.py --name PISwin224*224 --test cuhk03 --gpu_ids $1
+
+python3 train.py --spswin --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --h 384 --w 384 --lr 0.01 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name SPSwin384 --gpu_ids $1
+python3 cross_test.py --name SPSwin384 --test duke --gpu_ids $1
+python3 cross_test.py --name SPSwin384 --test market --gpu_ids $1
+python3 cross_test.py --name SPSwin384 --test cuhk03 --gpu_ids $1
+
+python3 train.py --spvit --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --h 384 --w 384 --lr 0.01 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name SPViT384 --gpu_ids $1
+python3 cross_test.py --name SPViT384 --test duke --gpu_ids $1
+python3 cross_test.py --name SPViT384 --test market --gpu_ids $1
+python3 cross_test.py --name SPViT384 --test cuhk03 --gpu_ids $1
+
+#python3 train.py --piswin --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --h 384 --w 384 --lr 0.01 --batch 24 --triplet --erasing_p 0.5  --warm_epoch 5 --name PISwin384*384 --gpu_ids $1
+#python3 cross_test.py --name PISwin384*384 --test duke --gpu_ids $1
+#python3 cross_test.py --name PISwin384*384 --test market --gpu_ids $1
+#python3 cross_test.py --name PISwin384*384 --test cuhk03 --gpu_ids $1
+

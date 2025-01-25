@@ -1,0 +1,8 @@
+10 epoch:
+ overall acc. : 0.885183 
+ mean acc.    : 0.794086 
+ mean IoU     : 0.711225 
+30 epochs:
+ overall acc. : 0.897573 
+ mean acc.    : 0.822159 
+ mean IoU     : 0.735995 
