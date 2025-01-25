@@ -1,0 +1,2 @@
+python3 tools/train.py --config_file='configs/HRNet18.yml' 
+python3 tools/test.py --config_file='configs/HRNet18.yml' OUTPUT_DIR "/home/jun/reid-strong-baseline/log/HRNet18/test"

@@ -1,0 +1,2 @@
+python3 tools/train.py --config_file 'configs/SPResNet50_IMPROVED.yml' 
+python3 tools/test.py --config_file 'configs/SPResNet50_IMPROVED.yml' OUTPUT_DIR "/home/jun/reid-strong-baseline/log/SPResNet50_IMPROVED/test"

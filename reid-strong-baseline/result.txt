@@ -1,0 +1,44 @@
+ResNet50(All is the same, recommend using ClassBlock one)
+    Normal:
+        2024-02-28 04:31:48,268 reid_baseline.train INFO: mAP: 75.5%
+        2024-02-28 04:31:48,268 reid_baseline.train INFO: CMC curve, Rank-1  :86.3%
+        2024-02-28 04:31:48,268 reid_baseline.train INFO: CMC curve, Rank-5  :93.4%
+        2024-02-28 04:31:48,268 reid_baseline.train INFO: CMC curve, Rank-10 :95.9%
+    Re-ranking:
+        2024-02-28 10:50:55,862 reid_baseline.inference INFO: mAP: 88.6%
+        2024-02-28 10:50:55,862 reid_baseline.inference INFO: CMC curve, Rank-1  :90.3%
+        2024-02-28 10:50:55,863 reid_baseline.inference INFO: CMC curve, Rank-5  :94.5%
+        2024-02-28 10:50:55,863 reid_baseline.inference INFO: CMC curve, Rank-10 :96.8%
+
+HRNet18:
+    Normal:
+        2024-02-28 07:00:11,648 reid_baseline.train INFO: mAP: 80.4%                       
+        2024-02-28 07:00:11,649 reid_baseline.train INFO: CMC curve, Rank-1  :90.1%        
+        2024-02-28 07:00:11,649 reid_baseline.train INFO: CMC curve, Rank-5  :95.7%       
+        2024-02-28 07:00:11,651 reid_baseline.train INFO: CMC curve, Rank-10 :96.8%  
+    Re-ranking:
+        2024-02-28 11:07:45,924 reid_baseline.inference INFO: mAP: 90.4%
+        2024-02-28 11:07:45,925 reid_baseline.inference INFO: CMC curve, Rank-1  :92.1%
+        2024-02-28 11:07:45,925 reid_baseline.inference INFO: CMC curve, Rank-5  :95.7%
+        2024-02-28 11:07:45,925 reid_baseline.inference INFO: CMC curve, Rank-10 :97.2%
+
+HRNet48:
+    Normal:
+        2024-02-28 14:19:41,292 reid_baseline.train INFO: mAP: 80.1%
+        2024-02-28 14:19:41,292 reid_baseline.train INFO: CMC curve, Rank-1  :90.2%
+        2024-02-28 14:19:41,292 reid_baseline.train INFO: CMC curve, Rank-5  :96.0%
+        2024-02-28 14:19:41,292 reid_baseline.train INFO: CMC curve, Rank-10 :97.1%
+    Re-ranking:
+        
+ResNet50:
+    Normal:
+        2024-02-28 13:00:48,575 reid_baseline.train INFO: mAP: 68.7%
+        2024-02-28 13:00:48,575 reid_baseline.train INFO: CMC curve, Rank-1  :82.0%
+        2024-02-28 13:00:48,575 reid_baseline.train INFO: CMC curve, Rank-5  :92.3%
+        2024-02-28 13:00:48,575 reid_baseline.train INFO: CMC curve, Rank-10 :94.6%
+    Re-ranking:
+        2024-02-28 13:27:13,107 reid_baseline.inference INFO: mAP: 85.7%
+        2024-02-28 13:27:13,107 reid_baseline.inference INFO: CMC curve, Rank-1  :87.9%
+        2024-02-28 13:27:13,107 reid_baseline.inference INFO: CMC curve, Rank-5  :93.0%
+        2024-02-28 13:27:13,107 reid_baseline.inference INFO: CMC curve, Rank-10 :95.1%
+

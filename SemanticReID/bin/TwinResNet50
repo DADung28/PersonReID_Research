@@ -1,0 +1,5 @@
+#!/bin/bash 
+#python3 train.py --TwinResNet50 --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --batch 32 --triplet --erasing_p 0.5  --warm_epoch 5 --name TwinResNet50 --gpu_ids $1
+python3 cross_test.py --name TwinResNet50 --test duke --gpu_ids $1
+python3 cross_test.py --name TwinResNet50 --test market --gpu_ids $1
+python3 cross_test.py --name TwinResNet50 --test cuhk03 --gpu_ids $1

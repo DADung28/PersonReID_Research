@@ -1,0 +1,16 @@
+#!/bin/bash 
+python3 train.py --piswin --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --h 384 --w 384 --batch 16 --triplet --warm_epoch 5 --name PISwin_noramdomerasing --gpu_ids $1
+python3 cross_test.py --name PISwin_noramdomerasing --test duke --gpu_ids $1
+python3 cross_test.py --name PISwin_noramdomerasing market --gpu_ids $1
+python3 cross_test.py --name PISwin_noramdomerasing --test cuhk03 --gpu_ids $1
+
+
+python3 train.py --piswin --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --h 384 --w 384 --batch 16 --triplet --erasing_p 0.5  --warm_epoch 5 --name PISwin --gpu_ids $1
+python3 cross_test.py --name PISwin --test duke --gpu_ids $1
+python3 cross_test.py --name PISwin --test market --gpu_ids $1
+python3 cross_test.py --name PISwin --test cuhk03 --gpu_ids $1
+
+python3 train.py --swin --data_dir /home/jun/ReID_Dataset/duke/dataloader/ --lr 0.01 --h 384 --w 384 --batch 16 --triplet   --warm_epoch 5 --name Swin384_norandomerasing --gpu_ids $1
+python3 cross_test.py --name Swin384_norandomerasing --test duke --gpu_ids $1
+python3 cross_test.py --name Swin384_norandomerasing --test market --gpu_ids $1
+python3 cross_test.py --name Swin384_norandomerasing --test cuhk03 --gpu_ids $1

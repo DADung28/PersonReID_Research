@@ -1,0 +1,2 @@
+python3 tools/train.py --config_file 'configs/SPResNet50_21_loss.yml' 
+python3 tools/test.py --config_file 'configs/SPResNet50_21_loss.yml' OUTPUT_DIR "/home/jun/reid-strong-baseline/log/SPResNet50_21_loss/test"
